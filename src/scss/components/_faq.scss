@@ -12,9 +12,11 @@
     }
 
     &__title {
-        font-size: 40px;
-        margin-bottom: 64px;
-        font-weight: 600;
+        margin: 0 0 50px 0;
+
+        @media (max-width: 992px) {
+            margin: 0 0 30px 0;
+        }
     }
 
     &__list {
@@ -59,7 +61,7 @@
 
     &__icon {
         font-size: 24px;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s ease;
         flex-shrink: 0;
         margin-left: 16px;
     }
@@ -67,7 +69,7 @@
     &__answer {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.3s ease;
+        transition: max-height 0.5s ease, padding 0.5s ease;
         color: #666666;
         line-height: 1.7;
         font-size: clamp(16px, 2vw, 18px);
