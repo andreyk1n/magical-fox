@@ -90,13 +90,6 @@ a {
     transition-duration: $transitionDuration;
 }
 
-a:hover {
-    color: $linkHoverColor;
-}
-
-a:active {
-    color: $activeColor;
-}
 
 // Застосування стилів для кнопкки з класом .button
 .button {

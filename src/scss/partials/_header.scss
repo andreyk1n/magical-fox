@@ -7,31 +7,81 @@
     top: 0;
     left: 0;
     transition: top $transitionDuration;
+    background-color: #fff;
+    padding: 17px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo {
+        z-index: 1;
+        img {
+            max-width: 180px;
+            width: 100%;
+
+            @media (max-width: 576px) {
+                max-width: 140px;
+            }
+        }
+    }
 
     &__nav {
         width: 100%;
-        max-width: 715px;
+        max-width: 500px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 15px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             position: absolute;
-            right: -100%; 
+            right: -100%;
             top: 0;
             flex-direction: column;
             gap: 25px;
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 100vh; 
+            min-height: 100vh;
             background-color: #ffffff;
             transition-duration: $transitionDuration;
         }
-    
+
         &.active {
-            right: 0; // Коли активне, меню буде видно
+            right: 0;
+        }
+
+        a {
+            transition-duration: .5s;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 0;
+                height: 1px;
+                background-color: #000;
+                transition-duration: .5s;
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+            }
+
+            &:hover {
+                color: #000;
+
+                &::before {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 992px) {
+                font-size: 25px;
+            }
         }
     }
 
@@ -39,7 +89,7 @@
         display: none;
     }
 
-    @media (max-width:768px) {
+    @media (max-width:992px) {
         &__burger {
             min-width: 20px;
             width: 40px;
@@ -50,7 +100,7 @@
             cursor: pointer;
             position: relative;
             z-index: 11;
-        
+
             span {
                 display: block;
                 width: 100%;
@@ -58,7 +108,7 @@
                 background-color: $buttonBgColor;
                 position: relative;
                 transition-duration: $transitionDuration;
-        
+
                 &::before,
                 &::after {
                     content: "";
@@ -68,27 +118,27 @@
                     background-color: $buttonBgColor;
                     transition-duration: $transitionDuration;
                 }
-        
+
                 &::before {
-                    top: -10px; 
+                    top: -10px;
                 }
-        
+
                 &::after {
-                    top: 10px; 
+                    top: 10px;
                 }
             }
-    
+
             &.active span {
-                background-color: transparent; 
-        
+                background-color: transparent;
+
                 &::before {
                     top: 0;
-                    transform: rotate(45deg); 
+                    transform: rotate(45deg);
                 }
-        
+
                 &::after {
                     top: 0;
-                    transform: rotate(-45deg); 
+                    transform: rotate(-45deg);
                 }
             }
         }

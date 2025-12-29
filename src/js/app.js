@@ -23,8 +23,8 @@
 // **Бургер-меню**
 // Додає клас .active для елементів .header__burger і .header__nav при кліку.
 // Інструкція: https://andreyk1n.github.io/starter-theme-docs/burger_menu.html
-// import { initBurgerMenu } from './functions/initBurgerMenu.js';
-// initBurgerMenu(); // Ініціалізація бургер-меню
+import { initBurgerMenu } from './functions/initBurgerMenu.js';
+initBurgerMenu(); // Ініціалізація бургер-меню
 // ==============================================================================================
 
 // ==============================================================================================
