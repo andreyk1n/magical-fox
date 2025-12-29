@@ -1,5 +1,55 @@
 <footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__section">
+        <img src="@img/footer/logo.svg" alt="Footer logo" class="footer__logo">
+        <p class="about__text">
+          Створюємо цифрові продукти, які надихають та працюють.
+        </p>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__section-title">Послуги</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">Веб-розробка</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Мобільні додатки</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Чат-боти</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">UI/UX дизайн</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__section-title">Контакти</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="mailto:hello@digitalstudio.com"
+              class="footer__link">hello@digitalstudio.com</a></li>
+          <li class="footer__list-item"><a href="tel:+380123456789" class="footer__link">+380 12 345 67 89</a></li>
+          <li class="footer__list-item"><span class="footer__link">Львів, Україна</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Digital Studio. Всі права захищено.</p>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.services, .projects, .about, .footer').forEach(section => {
+    observer.observe(section);
+  });
+</script>
 <script src="js/functions/lazyImg.js" defer></script>
 <script type="module" src="js/app.js"></script>
 

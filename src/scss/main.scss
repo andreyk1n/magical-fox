@@ -115,15 +115,6 @@ a {
     background-color: $buttonActive;
 }
 
-// Загальні стилі для списків
-ol,
-ul {
-    padding-left: 20px;
-
-    li:not(:last-child) {
-        padding-bottom: 15px;
-    }
-}
 
 h1 {
     @include adaptiveValue('font-size', 60px, 24px);
@@ -149,4 +140,17 @@ input {
 
 :-webkit-autofill::first-line {
     font-size: 16px;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
