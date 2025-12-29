@@ -1,0 +1,1 @@
+function toggleActive(){document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("[data-toggle]").forEach(e=>{e.addEventListener("click",()=>{e.classList.toggle("active")})})})}export{toggleActive};

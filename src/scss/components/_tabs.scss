@@ -1,0 +1,35 @@
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+  
+    &__buttons {
+      display: flex;
+    }
+  
+    &__button {
+      padding: 8px 16px;
+      border: 1px solid #333;
+      background-color: transparent;
+      cursor: pointer;
+      margin-right: 4px;
+  
+      &--active {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  
+    &__content {
+      display: none;
+      padding: 16px;
+      border: 1px solid #ddd;
+      margin-top: 8px;
+      width: 100%;
+  
+      &--active {
+        display: block;
+      }
+    }
+  }

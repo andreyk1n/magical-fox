@@ -1,0 +1,1 @@
+function initializeModalTriggers(){let i=!1;setTimeout(()=>location="#open-modal",3e4),setInterval(()=>location="#open-modal",3e5),document.addEventListener("mouseleave",e=>{!i&&(e.clientY<=0||e.clientX<=0||e.clientX>=innerWidth||e.clientY>=innerHeight)&&(location="#open-modal",i=!0)})}export{initializeModalTriggers};

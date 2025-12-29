@@ -1,0 +1,51 @@
+// ШРИФТИ
+$fontFamily: Arial, Helvetica, sans-serif;
+$fontSize: 18px;
+
+// Кольори
+$bgColor: white;
+$transitionDuration: .8s;
+$fontColor: rgb(67, 67, 70);
+$linkColor: rgb(87, 37, 109);
+$linkHoverColor: rgba(79, 13, 106, 0.578);
+$activeColor: rgb(51, 0, 128);
+$boxShadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// Внутрішні відступи
+$paddingSmall: 5px;
+$paddingMedium: 15px;
+$paddingLarge: 30px;
+
+// Розмір і вага заголовків
+$h1FontSize: 40px;
+$h2FontSize: 28px;
+$h3FontSize: 20px;
+$mainFontWeight: 400;
+$h1FontWeight: 900;
+$h2FontWeight: 800;
+$h3FontWeight: 700;
+
+// Стилі кнопки .button
+$buttonBgColor: rgb(80, 80, 117);
+$buttonFontColor: white;
+$buttonPaddings: 5px 20px;
+$buttonBorderRadius: 10px;
+$buttonHover: lightBlue;
+$buttonActive: rgb(16, 77, 97);
+
+// Обмеження контейнера
+$maxWidthContainer: 1170px;
+$paddingContainer: 15px;
+
+// Адаптив
+$mobileMicro: 320px;
+$mobileSmall: 478px;
+$mobileMedium: 576px;
+$mobileLarge: 768px;
+$tablet: 992px;
+$desktopSmall: 1200px;
+$desktopMedium: 1440px;
+$desktopBig: 1400px;
+
+// Перехід
+$transitionDuration: .5s;
