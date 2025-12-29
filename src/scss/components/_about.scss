@@ -1,0 +1,31 @@
+.about {
+    padding: 96px 0;
+    background-color: #f8f9fa;
+
+    @media (max-width: 992px) {
+        padding: 60px 0;
+    }
+
+    &.animate {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease forwards;
+    }
+
+    &__container {
+        max-width: 800px;
+    }
+
+    &__title {
+        font-size: 40px;
+        margin-bottom: 32px;
+        font-weight: 600;
+    }
+
+    &__text {
+        font-size: 18px;
+        color: #666666;
+        line-height: 1.8;
+        margin-bottom: 32px;
+    }
+}

@@ -37,7 +37,6 @@
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
   };
-
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -46,8 +45,20 @@
       }
     });
   }, observerOptions);
-  document.querySelectorAll('.services, .projects, .about, .footer').forEach(section => {
+  document.querySelectorAll('.services, .projects, .about, .faq, .footer').forEach(section => {
     observer.observe(section);
+  });
+  document.querySelectorAll('.faq__question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('faq__item--active');
+      document.querySelectorAll('.faq__item').forEach(el => {
+        el.classList.remove('faq__item--active');
+      });
+      if (!isActive) {
+        item.classList.add('faq__item--active');
+      }
+    });
   });
 </script>
 <script src="js/functions/lazyImg.js" defer></script>
