@@ -1,6 +1,8 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'partials/header';
+@use 'components/hero';
+@use 'components/services';
 @use 'partials/footer';
 
 
@@ -116,8 +118,10 @@ a {
 }
 
 
-h1 {
-    @include adaptiveValue('font-size', 60px, 24px);
+
+h2 {
+    font-size: clamp(30px, 5vw, 40px);
+    color: #000;
 }
 
 // Cтилізація ектів статусу для поточної сторінки
@@ -153,4 +157,24 @@ input {
     to {
         opacity: 1;
     }
+}
+
+/* Стилізація скроллбару */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e5e5;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
 }
