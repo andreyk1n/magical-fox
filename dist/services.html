@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <!-- Основна інформація -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter Theme Andreyk1n — навчальний проєкт</title>
+  <meta name="description"
+    content="Навчальний проєкт, створений на базі шаблону Starter Theme Andreyk1n. Демонструє структуру, компоненти та адаптивний дизайн для фронтенд розробки.">
+  <meta name="keywords"
+    content="starter theme, andreyk1n, навчальний проєкт, фронтенд, шаблон, адаптивний дизайн, веброзробка, Tailwind CSS, WordPress">
+  <meta name="author" content="Andreyk1n">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (для соцмереж) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="Starter Theme Andreyk1n — навчальний проєкт">
+  <meta property="og:description"
+    content="Це навчальний проєкт, створений на базі шаблону Starter Theme Andreyk1n. Використовується для демонстрації структури та принципів розробки.">
+  <meta property="og:image" content="./images/favicons/android-chrome-192x192.png">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:site_name" content="Starter Theme Andreyk1n">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Starter Theme Andreyk1n — навчальний проєкт">
+  <meta name="twitter:description"
+    content="Навчальний проєкт, створений на базі шаблону Starter Theme Andreyk1n для практики фронтенд розробки.">
+  <meta name="twitter:image" content="./images/favicons/android-chrome-192x192.png">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicons/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/android-chrome-192x192.png">
+  <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- <link rel="stylesheet" href="./swiper.min.css"> -->
+</head>
+
+<body>
+
+
+<div class="wrapper">
+  <header class="header">
+  <div class="header__container">
+    <a href="index.html" class="header__logo">
+      <img src="./images/header/logo.svg" alt="Header logo">
+    </a>
+    <nav class="header__nav">
+      <a href="services.html">Послуги</a>
+      <a href="projects.html">Проекти</a>
+      <a href="about.html">Про нас</a>
+      <a href="contacts.html">Контакти</a>
+    </nav>
+    <div class="header__burger">
+      <span></span>
+    </div>
+  </div>
+</header>
+
+  <section class="page-hero">
+    <div class="container">
+        <h1 class="page-hero__title">Наші послуги</h1>
+        <p class="page-hero__description">
+            Ми пропонуємо повний спектр послуг для розвитку вашого бізнесу в цифровому просторі. Від розробки до
+            підтримки — ми допоможемо вам на кожному етапі.
+        </p>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">01</p>
+            <h2 class="service-detail__title">Веб-розробка</h2>
+            <p class="service-detail__intro">
+                Створюємо адаптивні та швидкі веб-сайти з сучасним дизайном. Від лендингів до складних корпоративних
+                порталів з інтеграцією сторонніх сервісів та API.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Лендінги та багатосторінкові сайти</li>
+                <li class="service-detail__feature">Корпоративні портали</li>
+                <li class="service-detail__feature">Веб-додатки будь-якої складності</li>
+                <li class="service-detail__feature">Адаптивна верстка</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Що ми пропонуємо</h3>
+                <p class="service-detail__text">
+                    Наша команда спеціалізується на створенні сучасних веб-рішень, які не тільки виглядають чудово, але
+                    й забезпечують високу продуктивність та конверсію. Ми використовуємо найновіші технології та
+                    фреймворки для створення масштабованих рішень.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Розробка з нуля на React, Vue.js, або чистому JavaScript</li>
+                    <li class="service-detail__list-item">Інтеграція з CRM, CMS та сторонніми API</li>
+                    <li class="service-detail__list-item">Responsive дизайн для всіх пристроїв</li>
+                    <li class="service-detail__list-item">Оптимізація швидкості завантаження</li>
+                    <li class="service-detail__list-item">Безпечний та чистий код</li>
+                    <li class="service-detail__list-item">Документація та передача проєкту</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Технології</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">React</span>
+                    <span class="service-detail__tag">Vue.js</span>
+                    <span class="service-detail__tag">Node.js</span>
+                    <span class="service-detail__tag">TypeScript</span>
+                    <span class="service-detail__tag">Next.js</span>
+                    <span class="service-detail__tag">Tailwind CSS</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">02</p>
+            <h2 class="service-detail__title">WordPress розробка</h2>
+            <p class="service-detail__intro">
+                Розробляємо сайти на WordPress: корпоративні сайти, блоги, інтернет-магазини. Кастомні теми, плагіни,
+                оптимізація та підтримка.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Кастомні теми та плагіни</li>
+                <li class="service-detail__feature">WooCommerce магазини</li>
+                <li class="service-detail__feature">Міграція та оновлення</li>
+                <li class="service-detail__feature">Багатомовні сайти</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Чому WordPress</h3>
+                <p class="service-detail__text">
+                    WordPress — найпопулярніша CMS у світі, яка поєднує простоту управління з потужними можливостями. Ми
+                    створюємо індивідуальні рішення на WordPress, які повністю відповідають вашим бізнес-потребам.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Розробка унікальних тем з нуля</li>
+                    <li class="service-detail__list-item">Створення кастомних плагінів під специфічні задачі</li>
+                    <li class="service-detail__list-item">Налаштування WooCommerce для інтернет-магазинів</li>
+                    <li class="service-detail__list-item">ACF та Gutenberg блоки</li>
+                    <li class="service-detail__list-item">Інтеграція з платіжними системами</li>
+                    <li class="service-detail__list-item">Оптимізація для швидкості та безпеки</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Технології</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">WordPress</span>
+                    <span class="service-detail__tag">WooCommerce</span>
+                    <span class="service-detail__tag">ACF</span>
+                    <span class="service-detail__tag">Gutenberg</span>
+                    <span class="service-detail__tag">PHP</span>
+                    <span class="service-detail__tag">MySQL</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">03</p>
+            <h2 class="service-detail__title">Оптимізація сайтів</h2>
+            <p class="service-detail__intro">
+                Покращуємо швидкість завантаження, Core Web Vitals та загальну продуктивність сайту. Оптимізація коду,
+                зображень та серверних налаштувань.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Швидкість завантаження</li>
+                <li class="service-detail__feature">Core Web Vitals</li>
+                <li class="service-detail__feature">Оптимізація зображень</li>
+                <li class="service-detail__feature">Серверна оптимізація</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Швидкість = Конверсія</h3>
+                <p class="service-detail__text">
+                    Кожна секунда затримки завантаження сайту зменшує конверсію на 7%. Ми проводимо комплексну
+                    оптимізацію, щоб ваш сайт завантажувався максимально швидко на будь-яких пристроях та з'єднаннях.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Аналіз та покращення Core Web Vitals (LCP, FID, CLS)</li>
+                    <li class="service-detail__list-item">Оптимізація зображень, шрифтів та медіафайлів</li>
+                    <li class="service-detail__list-item">Мінімізація CSS, JavaScript та HTML</li>
+                    <li class="service-detail__list-item">Налаштування кешування та CDN</li>
+                    <li class="service-detail__list-item">Lazy loading та code splitting</li>
+                    <li class="service-detail__list-item">Оптимізація бази даних та запитів</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Інструменти</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">PageSpeed Insights</span>
+                    <span class="service-detail__tag">Lighthouse</span>
+                    <span class="service-detail__tag">GTmetrix</span>
+                    <span class="service-detail__tag">WebPageTest</span>
+                    <span class="service-detail__tag">CDN</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">04</p>
+            <h2 class="service-detail__title">Аудит сайтів</h2>
+            <p class="service-detail__intro">
+                Проводимо технічний та UX-аудит сайтів. Виявляємо помилки, слабкі місця та надаємо детальні рекомендації
+                для покращення.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Технічний аудит</li>
+                <li class="service-detail__feature">UX/UI аналіз</li>
+                <li class="service-detail__feature">Аудит безпеки</li>
+                <li class="service-detail__feature">Аналіз конкурентів</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Комплексний підхід</h3>
+                <p class="service-detail__text">
+                    Наш аудит охоплює всі аспекти вашого сайту — від технічної складової до користувацького досвіду. Ви
+                    отримуєте детальний звіт з конкретними рекомендаціями та планом дій для покращення.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Аналіз коду та архітектури сайту</li>
+                    <li class="service-detail__list-item">Перевірка продуктивності та швидкості</li>
+                    <li class="service-detail__list-item">Аналіз доступності (WCAG)</li>
+                    <li class="service-detail__list-item">Перевірка мобільної версії</li>
+                    <li class="service-detail__list-item">Аудит SEO та мета-тегів</li>
+                    <li class="service-detail__list-item">Аналіз користувацького досвіду та конверсії</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Що ви отримуєте</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">Детальний звіт</span>
+                    <span class="service-detail__tag">Рекомендації</span>
+                    <span class="service-detail__tag">План дій</span>
+                    <span class="service-detail__tag">Пріоритизація</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">05</p>
+            <h2 class="service-detail__title">SEO оптимізація</h2>
+            <p class="service-detail__intro">
+                Налаштовуємо базову та розширену SEO-оптимізацію: структура сайту, мета-теги, швидкість, індексація та
+                підготовка до просування.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Технічне SEO</li>
+                <li class="service-detail__feature">On-page оптимізація</li>
+                <li class="service-detail__feature">Семантичне ядро</li>
+                <li class="service-detail__feature">Структура сайту</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Видимість у пошуку</h3>
+                <p class="service-detail__text">
+                    Правильна SEO-оптимізація — це фундамент для успішного просування сайту. Ми налаштовуємо всі
+                    технічні аспекти, щоб ваш сайт був зрозумілий для пошукових систем і легко індексувався.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Налаштування мета-тегів (title, description, Open Graph)</li>
+                    <li class="service-detail__list-item">Оптимізація структури URL та внутрішньої перелінковки</li>
+                    <li class="service-detail__list-item">Створення XML карти сайту та robots.txt</li>
+                    <li class="service-detail__list-item">Налаштування Schema.org розмітки</li>
+                    <li class="service-detail__list-item">Оптимізація швидкості для SEO</li>
+                    <li class="service-detail__list-item">Mobile-first індексація</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Інструменти</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">Google Search Console</span>
+                    <span class="service-detail__tag">Google Analytics</span>
+                    <span class="service-detail__tag">Screaming Frog</span>
+                    <span class="service-detail__tag">Ahrefs</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">06</p>
+            <h2 class="service-detail__title">Мобільні додатки</h2>
+            <p class="service-detail__intro">
+                Розробляємо нативні та кросплатформні мобільні додатки для iOS та Android з фокусом на стабільність,
+                безпеку та масштабованість.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">iOS та Android</li>
+                <li class="service-detail__feature">Кросплатформні рішення</li>
+                <li class="service-detail__feature">API інтеграції</li>
+                <li class="service-detail__feature">Публікація в Store</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Функціональні та стабільні</h3>
+                <p class="service-detail__text">
+                    Ми створюємо мобільні додатки, які працюють швидко, стабільно та забезпечують зручний
+                    користувацький досвід. Враховуємо бізнес-логіку, безпеку та майбутнє масштабування.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Нативна та кросплатформна розробка</li>
+                    <li class="service-detail__list-item">Інтеграція з бекендом та API</li>
+                    <li class="service-detail__list-item">Push-сповіщення</li>
+                    <li class="service-detail__list-item">Авторизація та безпека</li>
+                    <li class="service-detail__list-item">Підготовка до App Store та Google Play</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Технології</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">React Native</span>
+                    <span class="service-detail__tag">Flutter</span>
+                    <span class="service-detail__tag">Swift</span>
+                    <span class="service-detail__tag">Kotlin</span>
+                    <span class="service-detail__tag">REST API</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">07</p>
+            <h2 class="service-detail__title">Чат-боти</h2>
+            <p class="service-detail__intro">
+                Створюємо чат-ботів для автоматизації продажів, підтримки клієнтів та внутрішніх процесів бізнесу.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Автоматизація продажів</li>
+                <li class="service-detail__feature">Підтримка клієнтів</li>
+                <li class="service-detail__feature">Інтеграція з CRM</li>
+                <li class="service-detail__feature">24/7 робота</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Автоматизація процесів</h3>
+                <p class="service-detail__text">
+                    Чат-боти допомагають зменшити навантаження на менеджерів, пришвидшити обробку заявок
+                    та покращити сервіс для клієнтів.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Продажі та консультації</li>
+                    <li class="service-detail__list-item">Підтримка клієнтів</li>
+                    <li class="service-detail__list-item">Збір заявок та контактів</li>
+                    <li class="service-detail__list-item">Інтеграція з CRM та базами даних</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Платформи</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">Telegram</span>
+                    <span class="service-detail__tag">WhatsApp</span>
+                    <span class="service-detail__tag">Facebook Messenger</span>
+                    <span class="service-detail__tag">Node.js</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">08</p>
+            <h2 class="service-detail__title">UI / UX дизайн</h2>
+            <p class="service-detail__intro">
+                Проєктуємо інтерфейси, орієнтовані на користувача. Підвищуємо зручність, зрозумілість та конверсію.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Прототипування</li>
+                <li class="service-detail__feature">Дизайн-системи</li>
+                <li class="service-detail__feature">UX-дослідження</li>
+                <li class="service-detail__feature">Покращення конверсії</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Дизайн, що працює</h3>
+                <p class="service-detail__text">
+                    Ми створюємо інтерфейси, які не тільки виглядають сучасно, а й допомагають користувачу
+                    швидко досягати своєї мети.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">UX-дослідження та аналіз</li>
+                    <li class="service-detail__list-item">Wireframes та прототипи</li>
+                    <li class="service-detail__list-item">UI дизайн</li>
+                    <li class="service-detail__list-item">Дизайн-системи</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Інструменти</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">Figma</span>
+                    <span class="service-detail__tag">Adobe XD</span>
+                    <span class="service-detail__tag">Design System</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="service-detail">
+    <div class="container service-detail__container">
+        <div class="service-detail__header">
+            <p class="service-detail__number">09</p>
+            <h2 class="service-detail__title">Технічна підтримка</h2>
+            <p class="service-detail__intro">
+                Забезпечуємо стабільну роботу та розвиток існуючих проєктів. Оновлення, виправлення помилок та безпека.
+            </p>
+            <ul class="service-detail__features">
+                <li class="service-detail__feature">Оновлення систем</li>
+                <li class="service-detail__feature">Виправлення помилок</li>
+                <li class="service-detail__feature">Резервні копії</li>
+                <li class="service-detail__feature">Безпека</li>
+            </ul>
+        </div>
+
+        <div class="service-detail__content">
+            <div>
+                <h3 class="service-detail__section-title">Підтримка 24/7</h3>
+                <p class="service-detail__text">
+                    Ми слідкуємо за стабільністю вашого проєкту, оперативно реагуємо на проблеми
+                    та допомагаємо з подальшим розвитком.
+                </p>
+                <ul class="service-detail__list">
+                    <li class="service-detail__list-item">Моніторинг та підтримка</li>
+                    <li class="service-detail__list-item">Регулярні оновлення</li>
+                    <li class="service-detail__list-item">Виправлення помилок</li>
+                    <li class="service-detail__list-item">Резервне копіювання</li>
+                    <li class="service-detail__list-item">Покращення та масштабування</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="service-detail__section-title">Формат роботи</h3>
+                <div class="service-detail__tags">
+                    <span class="service-detail__tag">Підписка</span>
+                    <span class="service-detail__tag">Погодинно</span>
+                    <span class="service-detail__tag">SLA</span>
+                </div>
+            </div>
+
+            <div class="service-detail__cta">
+                <a href="#contact" class="service-detail__button">Замовити послугу</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__container">
+      <div class="footer__section">
+        <img src="./images/footer/logo.svg" alt="Footer logo" class="footer__logo">
+        <p class="about__text">
+          Створюємо цифрові продукти, які надихають та працюють.
+        </p>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__section-title">Послуги</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="#" class="footer__link">Веб-розробка</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Мобільні додатки</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">Чат-боти</a></li>
+          <li class="footer__list-item"><a href="#" class="footer__link">UI/UX дизайн</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__section-title">Контакти</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item"><a href="mailto:hello@digitalstudio.com"
+              class="footer__link">hello@digitalstudio.com</a></li>
+          <li class="footer__list-item"><a href="tel:+380123456789" class="footer__link">+380 12 345 67 89</a></li>
+          <li class="footer__list-item"><span class="footer__link">Львів, Україна</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Digital Studio. Всі права захищено.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.services, .projects, .about, .faq, .footer').forEach(section => {
+    observer.observe(section);
+  });
+  document.querySelectorAll('.faq__question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isActive = item.classList.contains('faq__item--active');
+      document.querySelectorAll('.faq__item').forEach(el => {
+        el.classList.remove('faq__item--active');
+      });
+      if (!isActive) {
+        item.classList.add('faq__item--active');
+      }
+    });
+  });
+</script>
+<script src="js/functions/lazyImg.js" defer></script>
+<script type="module" src="js/app.js"></script>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.wrapper').classList.add('loaded');
+    }, 2500);
+  });
+</script>
+</body>
+
+</html>
