@@ -1,0 +1,142 @@
+
+.page-hero {
+  padding: 64px 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+
+  &__title {
+    font-size: clamp(40px, 5vw, 56px);
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  &__description {
+    font-size: 18px;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.filter {
+  padding: 32px 0 64px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__button {
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-family: inherit;
+
+    &:hover {
+      border-color: #1a1a1a;
+      color: #1a1a1a;
+    }
+
+    &--active {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      border-color: #1a1a1a;
+    }
+  }
+}
+
+.projects-grid {
+  padding-bottom: 96px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 32px;
+  }
+}
+
+.project-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+  color: #1a1a1a;
+
+  &--hidden {
+    display: none;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  }
+
+  &:hover &__image {
+    transform: scale(1.05);
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  &__content {
+    padding: 32px;
+    background-color: #ffffff;
+  }
+
+  &__category {
+    font-size: 14px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  &__description {
+    color: #666666;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  &__tag {
+    font-size: 13px;
+    padding: 4px 12px;
+    background-color: #f8f9fa;
+    color: #666666;
+    border-radius: 2px;
+  }
+}
