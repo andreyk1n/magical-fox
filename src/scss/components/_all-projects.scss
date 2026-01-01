@@ -1,6 +1,6 @@
 
 .page-hero {
-  padding: 64px 0;
+  padding: 120px 0 60px 0;
   text-align: center;
   opacity: 0;
   transform: translateY(30px);
@@ -33,6 +33,10 @@
     gap: 16px;
     justify-content: center;
     list-style: none;
+
+    @media (max-width: 900px) {
+      justify-content: flex-start;
+    }
   }
 
   &__button {
@@ -46,8 +50,7 @@
     font-family: inherit;
 
     &:hover {
-      border-color: #1a1a1a;
-      color: #1a1a1a;
+      opacity: .7;
     }
 
     &--active {
@@ -64,7 +67,7 @@
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease 0.4s forwards;
 
-  &__container {
+  &__content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 32px;
