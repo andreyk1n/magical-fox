@@ -170,20 +170,95 @@ input {
 
 /* Стилізація скроллбару */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+    background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e5e5e5;
-  border-radius: 4px;
-  transition: background 0.3s ease;
+    background: #e5e5e5;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #666666;
+    background: #666666;
+}
+
+
+.tech {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 120px 32px 96px 32px;
+
+    @media (max-width: 992px) {
+        padding: 96px 15px;
+    }
+
+    h1 {
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 600;
+        margin-bottom: 16px;
+        line-height: 1.2;
+    }
+
+    .updated {
+        color: #666666;
+        margin-bottom: 64px;
+        font-size: clamp(14px, 2vw, 16px);
+    }
+
+    h2 {
+        font-size: clamp(24px, 4vw, 32px);
+        font-weight: 600;
+        margin-top: 64px;
+        margin-bottom: 24px;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: clamp(18px, 3vw, 24px);
+        font-weight: 600;
+        margin-top: 48px;
+        margin-bottom: 16px;
+        line-height: 1.4;
+    }
+
+    p {
+        font-size: clamp(15px, 2vw, 17px);
+        color: #1a1a1a;
+        margin-bottom: 24px;
+        line-height: 1.8;
+    }
+
+    ul,
+    ol {
+        font-size: clamp(15px, 2vw, 17px);
+        color: #1a1a1a;
+        margin-bottom: 24px;
+        padding-left: 32px;
+        line-height: 1.8;
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    strong {
+        font-weight: 600;
+        color: #1a1a1a;
+    }
+
+    a {
+        color: #1a1a1a;
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
