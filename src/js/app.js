@@ -1,93 +1,71 @@
-// ==============================================================================================
-// **Загальні підключення JavaScript-компонентів**
-// У цьому файлі підключені всі скрипти, які можуть знадобитися для роботи проекту. 
-// ==============================================================================================
+// burger
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.header__burger');
+    const nav = document.querySelector('.header__nav');
+    const body = document.body;
 
-// ==============================================================================================
-// **Відстеження елементів для анімації**
-// Скрипт для автоматичного запуску анімацій при появі елементів у видимій області екрану.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/element_watcher.html
-// import { initializeElementWatcher } from './functions/elementWatcher.js';
-// initializeElementWatcher(); // Ініціалізація функціоналу
-// ==============================================================================================
+    burger.addEventListener('click', e => {
+        e.stopPropagation();
 
-// ==============================================================================================
-// **Адаптивне переміщення елементів**
-// Використовується для динамічного переміщення елементів DOM залежно від ширини екрану.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/move_to.html
-// import moveElements from './functions/moveTo.js';
-// moveElements(); // Виклик функції для переміщення
-// ==============================================================================================
+        const isActive = burger.classList.toggle('active');
+        nav.classList.toggle('active', isActive);
+        body.classList.toggle('no-scroll', isActive);
+    });
 
-// ==============================================================================================
-// **Бургер-меню**
-// Додає клас .active для елементів .header__burger і .header__nav при кліку.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/burger_menu.html
-import { initBurgerMenu } from './functions/initBurgerMenu.js';
-initBurgerMenu(); // Ініціалізація бургер-меню
-// ==============================================================================================
+    document.addEventListener('click', e => {
+        if (!burger.contains(e.target) && !nav.contains(e.target)) {
+            burger.classList.remove('active');
+            nav.classList.remove('active');
+            body.classList.remove('no-scroll');
+        }
+    });
+});
+// /burger
 
-// ==============================================================================================
-// **Аккордіон**
-// Додає функціонал аккордіонів для приховування та розгортання контенту.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/accordion.html
-// import { initAccordion } from './functions/accordion.js';
-// initAccordion(); // Ініціалізація аккордіонів
-// **Примітка**: Не забудьте підключити стилі для аккордіону окремо.
-// ==============================================================================================
+// animation observe
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+document.querySelectorAll('.services, .projects, .about, .faq, .footer').forEach(section => {
+    observer.observe(section);
+});
+// /animation observe
 
-// ==============================================================================================
-// **Скрол хедера**
-// Додає або змінює класи для хедера залежно від положення скролу.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/sticky_header.html
-// import { initScrollControlledHeader } from './functions/scrollHeader.js';
-// initScrollControlledHeader(); // Ініціалізація функціоналу
-// ==============================================================================================
+// faq
+document.querySelectorAll('.faq__question').forEach(button => {
+    button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item.classList.contains('faq__item--active');
+        document.querySelectorAll('.faq__item').forEach(el => {
+            el.classList.remove('faq__item--active');
+        });
+        if (!isActive) {
+            item.classList.add('faq__item--active');
+        }
+    });
+});
+// /faq
 
-// ==============================================================================================
-// **Таби**
-// Реалізація вкладок для перемикання контенту.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/tabs.html
-// import { initTabs } from './functions/initTabs.js';
-// initTabs(); // Ініціалізація функціоналу табів
-// ==============================================================================================
+// current page
+const currentPage =
+    window.location.pathname === '/'
+        ? 'index.html'
+        : window.location.pathname.split('/').pop();
+document.querySelectorAll('.header__link, .footer__link').forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+        link.classList.add('current-page');
+        link.setAttribute('aria-current', 'page');
+    }
+});
+// /current page
 
-// ==============================================================================================
-// **Цифровий лічильник**
-// Скрипт для анімації чисел, які збільшуються від 0 до заданого значення.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/number_counter.html
-// import { initializeCounters } from './functions/numberCounter.js';
-// initializeCounters(); // Запуск анімації лічильників
-// ==============================================================================================
-
-// ==============================================================================================
-// **Таймер для модального вікна**
-// Автоматичне відкриття модального вікна через заданий час.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/modal.html
-// import { initializeModalTriggers } from './functions/modalTimer.js';
-// initializeModalTriggers(); // Ініціалізація таймера
-// ==============================================================================================
-
-// ==============================================================================================
-// **Кастомний селект**
-// Налаштування випадаючого меню зі стилізацією.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/select.html
-// import { selectMenu } from './functions/selectMenu.js';
-// selectMenu(); // Ініціалізація кастомного селекту
-// ==============================================================================================
-
-// ==============================================================================================
-// **Визначення поточної сторінки**
-// Скрипт додає унікальний клас до елемента меню, відповідного активній сторінці.
-// Інструкція: https://andreyk1n.github.io/starter-theme-docs/current_page.html
-// import { currentPage } from './functions/currentPage.js';
-// currentPage(); // Виклик функції
-// ==============================================================================================
-
-// ==============================================================================================
-// **Тоггл кнопка**
-// Додає/знімає клас .active для елементів за допомогою кліку.
-// Інструкція: в процесі
-// import { toggleActive } from './functions/toggleActive.js';
-// toggleActive(); // Ініціалізація функції
-// ==============================================================================================

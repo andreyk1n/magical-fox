@@ -262,3 +262,11 @@ input {
         }
     }
 }
+
+a.current-page {
+    color: #000;
+
+    &::before {
+        width: 100%;
+    }
+}

@@ -55,10 +55,10 @@
       <img src="./images/header/logo.svg" alt="Header logo">
     </a>
     <nav class="header__nav">
-      <a href="services.html">Послуги</a>
-      <a href="projects.html">Проекти</a>
-      <a href="about.html">Про нас</a>
-      <a href="contacts.html">Контакти</a>
+      <a class="header__link" href="services.html">Послуги</a>
+      <a class="header__link" href="projects.html">Проекти</a>
+      <a class="header__link" href="about.html">Про нас</a>
+      <a class="header__link" href="contacts.html">Контакти</a>
     </nav>
     <div class="header__burger">
       <span></span>
@@ -322,12 +322,12 @@
         </p>
       </div>
       <div class="footer__section">
-        <h3 class="footer__section-title">Послуги</h3>
+        <h3 class="footer__section-title">Навігація</h3>
         <ul class="footer__list">
-          <li class="footer__list-item"><a href="#" class="footer__link">Веб-розробка</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Мобільні додатки</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">Чат-боти</a></li>
-          <li class="footer__list-item"><a href="#" class="footer__link">UI/UX дизайн</a></li>
+          <li class="footer__list-item"><a href="services.html" class="footer__link">Послуги</a></li>
+          <li class="footer__list-item"><a href="projects.html" class="footer__link">Проекти</a></li>
+          <li class="footer__list-item"><a href="about.html" class="footer__link">Про нас</a></li>
+          <li class="footer__list-item"><a href="contacts.html" class="footer__link">Контакти</a></li>
         </ul>
       </div>
       <div class="footer__section">
@@ -346,36 +346,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-  document.querySelectorAll('.services, .projects, .about, .faq, .footer').forEach(section => {
-    observer.observe(section);
-  });
-  document.querySelectorAll('.faq__question').forEach(button => {
-    button.addEventListener('click', () => {
-      const item = button.parentElement;
-      const isActive = item.classList.contains('faq__item--active');
-      document.querySelectorAll('.faq__item').forEach(el => {
-        el.classList.remove('faq__item--active');
-      });
-      if (!isActive) {
-        item.classList.add('faq__item--active');
-      }
-    });
-  });
-</script>
 <script src="js/functions/lazyImg.js" defer></script>
 <script type="module" src="js/app.js"></script>
 
