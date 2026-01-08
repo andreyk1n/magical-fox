@@ -1,6 +1,6 @@
 .footer {
     padding: 4rem 0;
-    border-top: 1px solid #e5e5e5;
+    border-top: 2px solid #e5e5e5;
     background-color: #f8f9fa;
 
     &.animate {
@@ -44,7 +44,7 @@
             &::before {
                 content: '';
                 width: 0;
-                height: 1px;
+                height: 2px;
                 background-color: #000;
                 transition-duration: .5s;
                 position: absolute;

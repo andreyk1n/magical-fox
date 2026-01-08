@@ -9,7 +9,7 @@
     transition: top $transitionDuration;
     background-color: #fff;
     padding: 17px 0;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
 
     &__container {
         display: flex;
@@ -63,7 +63,7 @@
             &::before {
                 content: '';
                 width: 0;
-                height: 1px;
+                height: 2px;
                 background-color: #000;
                 transition-duration: .5s;
                 position: absolute;
