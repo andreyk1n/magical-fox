@@ -1,5 +1,19 @@
 .projects {
     padding: 96px 0;
+    position: relative;
+
+    &__decor {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+
+        @media (max-width: 992px) {
+            object-fit: cover;
+        }
+    }
 
     @media (max-width: 992px) {
         padding: 60px 0;
