@@ -1,7 +1,9 @@
+@use 'variables' as *;
+
 /* Services */
 .services {
     padding: 96px 0;
-    background-color: #f8f9fa;
+    background-color: var(--section-bg);
 
     @media (max-width: 992px) {
         padding: 60px 0;
@@ -16,6 +18,7 @@
     &__title {
         margin: 0 0 50px 0;
         font-weight: 600;
+        color: var(--text-color);
 
         @media (max-width: 992px) {
             margin: 0 0 30px 0;
@@ -30,13 +33,13 @@
 
     &__item {
         padding: 40px;
-        background-color: #ffffff;
-        border: 1px solid #e5e5e5;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 40px var(--shadow-sm);
         }
     }
 
@@ -44,10 +47,11 @@
         font-size: 22px;
         margin-bottom: 16px;
         font-weight: 600;
+        color: var(--text-color);
     }
 
     &__item-description {
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
     }
 }

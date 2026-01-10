@@ -1,6 +1,9 @@
+@use 'variables' as *;
+
 /* Contact Section */
 .contact {
     padding: 96px 0;
+    background-color: var(--bg-color);
 
     &.animate {
         opacity: 0;
@@ -25,10 +28,11 @@
         font-size: 32px;
         font-weight: 600;
         margin-bottom: 32px;
+        color: var(--text-color);
     }
 
     &__text {
-        color: #666666;
+        color: var(--text-secondary);
         margin-bottom: 64px;
         line-height: 1.7;
     }
@@ -44,36 +48,39 @@
         gap: 16px;
         margin-bottom: 32px;
         padding: 32px;
-        border: 1px solid #e5e5e5;
+        border: 1px solid var(--border-color);
+        background-color: var(--card-bg);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px var(--shadow-sm);
         }
     }
 
     &__icon {
         font-size: 24px;
         flex-shrink: 0;
+        color: var(--text-color);
     }
 
     &__label {
         font-weight: 600;
         margin-bottom: 8px;
+        color: var(--text-color);
     }
 
     &__value {
-        color: #666666;
+        color: var(--text-secondary);
     }
 
     &__link {
-        color: #666666;
+        color: var(--text-secondary);
         text-decoration: none;
         transition: color 0.3s ease;
 
         &:hover {
-            color: #1a1a1a;
+            color: var(--text-color);
         }
     }
 }
@@ -85,6 +92,7 @@
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__list {
@@ -105,23 +113,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid #e5e5e5;
+        border: 1px solid var(--border-color);
+        background-color: var(--card-bg);
         text-decoration: none;
-        color: #1a1a1a;
+        color: var(--text-color);
         font-size: 20px;
         transition: transform 0.3s ease, background-color 0.3s ease;
 
         &:hover {
             transform: translateY(-3px);
-            background-color: #f8f9fa;
+            background-color: var(--section-bg);
         }
     }
 }
 
 .contact-form {
     padding: 64px;
-    background-color: #f8f9fa;
-    border: 1px solid #e5e5e5;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
 
     @media (max-width: 992px) {
         padding: 35px;
@@ -135,6 +144,7 @@
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 32px;
+        color: var(--text-color);
     }
 
     &__group {
@@ -145,7 +155,7 @@
         display: block;
         margin-bottom: 8px;
         font-weight: 500;
-        color: #1a1a1a;
+        color: var(--text-color);
     }
 
     &__input,
@@ -153,16 +163,16 @@
     &__select {
         width: 100%;
         padding: 16px;
-        border: 1px solid #e5e5e5;
-        background-color: #ffffff;
-        color: #1a1a1a;
+        border: 1px solid var(--input-border);
+        background-color: var(--input-bg);
+        color: var(--input-text);
         font-family: inherit;
         font-size: 16px;
         transition: border-color 0.3s ease;
 
         &:focus {
             outline: none;
-            border-color: #1a1a1a;
+            border-color: var(--input-focus-border);
         }
     }
 
@@ -174,8 +184,8 @@
     &__button {
         width: 100%;
         padding: 16px 32px;
-        background-color: #1a1a1a;
-        color: #ffffff;
+        background-color: var(--button-bg);
+        color: var(--button-text);
         border: none;
         font-family: inherit;
         font-size: 16px;
@@ -185,7 +195,7 @@
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-lg);
         }
 
         &:active {
@@ -196,10 +206,11 @@
     &__success {
         display: none;
         padding: 32px;
-        background-color: #ffffff;
-        border: 1px solid #1a1a1a;
+        background-color: var(--card-bg);
+        border: 1px solid var(--text-color);
         margin-top: 32px;
         text-align: center;
+        color: var(--text-color);
 
         &--visible {
             display: block;

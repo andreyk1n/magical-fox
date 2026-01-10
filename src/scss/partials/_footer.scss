@@ -1,7 +1,7 @@
 .footer {
     padding: 4rem 0;
-    border-top: 2px solid #e5e5e5;
-    background-color: #f8f9fa;
+    border-top: 2px solid var(--border-color);
+    background-color: var(--section-bg);
 
     &.animate {
         opacity: 0;
@@ -29,6 +29,7 @@
         font-size: clamp(18px, 5vw, 20px);
         margin-bottom: 1rem;
         font-weight: 600;
+        color: var(--text-color);
     }
 
     &__list {
@@ -45,7 +46,7 @@
                 content: '';
                 width: 0;
                 height: 2px;
-                background-color: #000;
+                background-color: var(--text-color);
                 transition-duration: .5s;
                 position: absolute;
                 left: 0;
@@ -53,7 +54,7 @@
             }
 
             &:hover {
-                color: #000;
+                color: var(--text-color);
                 &::before {
                     width: 100%;
                 }
@@ -61,23 +62,22 @@
         }
     }
 
-
     &__link {
-        color: #666666;
+        color: var(--text-color);
         text-decoration: none;
         transition: color 0.3s ease;
 
         &:hover {
-            color: #1a1a1a;
+            color: var(--text-color);
         }
     }
 
     &__bottom {
         margin-top: 4rem;
         padding-top: 2rem;
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid var(--border-color);
         text-align: center;
-        color: #666666;
+        color: var(--text-secondary);
         font-size: 0.875rem;
     }
 }

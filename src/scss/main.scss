@@ -12,52 +12,6 @@
 @use 'components/all-contacts';
 @use 'partials/footer';
 
-
-// ==============================================================================================
-// **Стилізація форми**
-// Цей модуль відповідає за стилі всіх форм, включаючи поля введення, кнопки та валідацію.
-// Підключення:
-// @use 'partials/form';
-// ==============================================================================================
-
-// ==============================================================================================
-// **Стилі аккордіону**
-// Відповідає за вигляд і анімацію елементів аккордіону, включаючи заголовки та контент.
-// Підключення:
-// @use 'components/accordion';
-// ==============================================================================================
-
-// ==============================================================================================
-// **Стилі табів**
-// Додає стилізацію для вкладок (tabs), включаючи активний стан і контент.
-// Підключення:
-// @use 'components/tabs';
-// ==============================================================================================
-
-// ==============================================================================================
-// **Модальні вікна та поп-апи**
-// Налаштування стилів для модальних вікон, поп-апів і тригерів для їх відкриття/закриття.
-// Підключення:
-// @use 'partials/modal';
-// ==============================================================================================
-
-// ==============================================================================================
-// **Кастомний селект**
-// Базова стилізація кастомного селекту, включаючи розмір, кольори та поведінку.
-// Підключення:
-// @use 'components/customSelect';
-// ==============================================================================================
-
-// ==============================================================================================
-// **Анімації**
-// Модуль для додавання анімацій за класами, які можуть бути використані для будь-якого елемента.
-// Підключення:
-// @use 'partials/animation';
-// ==============================================================================================
-
-
-
-// Для стартових налаштувнань теми
 * {
     margin: 0;
     padding: 0;
@@ -67,10 +21,11 @@
 body {
     font-family: $fontFamily;
     font-size: $fontSize;
-    color: $fontColor;
-    background-color: $bgColor;
+    background-color: var(--bg-color);
+    color: var(--text-secondary);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .wrapper {
@@ -84,75 +39,75 @@ body {
     overflow: hidden;
 }
 
-// Обмежуючий контейнер - цей контейнер часто зустрічається в проектах, якщо сайт має певну геометрію.
 [class*='__container'] {
     max-width: $maxWidthContainer;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px
+    padding: 0 15px;
 }
 
-// Застосування стилів для посилання: колір, час анімації, активний стан.
 a {
-    color: $linkColor;
+    color: var(--text-color);
     text-decoration: none;
     transition-duration: $transitionDuration;
+
+    &.current-page {
+        &::before {
+            width: 100%;
+        }
+    }
 }
 
-
-// Застосування стилів для кнопкки з класом .button
 .button {
     width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $buttonBgColor;
-    transition-duration: $transitionDuration;
     color: $buttonFontColor;
     padding: $buttonPaddings;
     border-radius: $buttonBorderRadius;
-    cursor: pointer;
     border: 0;
     outline: 0;
+    cursor: pointer;
+    transition-duration: $transitionDuration;
+
+    &:hover {
+        background-color: $buttonHover;
+    }
+
+    &:active {
+        background-color: $buttonActive;
+    }
 }
 
-.button:hover {
-    background-color: $buttonHover;
-}
-
-.button:active {
-    background-color: $buttonActive;
-}
-
-h1 {
-    color: #000;
+h1,
+h2 {
+    color: var(--text-color);
 }
 
 h2 {
     font-size: clamp(30px, 5vw, 40px);
-    color: #000;
 }
 
-// Cтилізація ектів статусу для поточної сторінки
 .currentPage {
     text-decoration: underline;
 }
 
-// Обнулення стилів автозаповнення форми
 input {
-    background: #fff !important;
-}
+    background: var(--input-bg) !important;
 
-:-webkit-autofill,
-:-webkit-autofill:hover,
-:-webkit-autofill:focus {
-    filter: none;
-    -webkit-text-fill-color: #333;
-    -webkit-box-shadow: 0 0 0px 40rem #fff inset;
-}
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        filter: none;
+        -webkit-text-fill-color: var(--autofill-text);
+        -webkit-box-shadow: 0 0 0 40rem var(--autofill-bg) inset;
+    }
 
-:-webkit-autofill::first-line {
-    font-size: 16px;
+    &:-webkit-autofill::first-line {
+        font-size: 16px;
+    }
 }
 
 @keyframes fadeInUp {
@@ -168,26 +123,24 @@ input {
     }
 }
 
-/* Стилізація скроллбару */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #e5e5e5;
+    background: var(--scrollbar-thumb);
     border-radius: 4px;
     transition: background 0.3s ease;
-}
 
-::-webkit-scrollbar-thumb:hover {
-    background: #666666;
+    &:hover {
+        background: var(--scrollbar-thumb-hover);
+    }
 }
-
 
 .tech {
     max-width: 900px;
@@ -206,7 +159,7 @@ input {
     }
 
     .updated {
-        color: #666666;
+        color: var(--text-secondary);
         margin-bottom: 64px;
         font-size: clamp(14px, 2vw, 16px);
     }
@@ -229,7 +182,7 @@ input {
 
     p {
         font-size: clamp(15px, 2vw, 17px);
-        color: #1a1a1a;
+        color: var(--text-color);
         margin-bottom: 24px;
         line-height: 1.8;
     }
@@ -237,7 +190,7 @@ input {
     ul,
     ol {
         font-size: clamp(15px, 2vw, 17px);
-        color: #1a1a1a;
+        color: var(--text-color);
         margin-bottom: 24px;
         padding-left: 32px;
         line-height: 1.8;
@@ -249,11 +202,10 @@ input {
 
     strong {
         font-weight: 600;
-        color: #1a1a1a;
+        color: var(--text-color);
     }
 
     a {
-        color: #1a1a1a;
         text-decoration: underline;
         transition: opacity 0.3s ease;
 
@@ -263,10 +215,20 @@ input {
     }
 }
 
-a.current-page {
-    color: #000;
+[data-theme="dark"] {
+    .header__theme-toggle {
+        .theme-icon--light {
+            display: none;
+        }
 
-    &::before {
-        width: 100%;
+        .theme-icon--dark {
+            display: block;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .header__logo img, .footer__logo {
+        filter: brightness(0) invert(1);
     }
 }

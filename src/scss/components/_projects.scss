@@ -1,5 +1,8 @@
+@use 'variables' as *;
+
 .projects {
     padding: 96px 0;
+    background-color: var(--bg-color);
 
     @media (max-width: 992px) {
         padding: 60px 0;
@@ -23,15 +26,16 @@
     }
 
     &__link {
-        color: #666666;
+        color: var(--text-secondary);
         text-decoration: none;
         display: flex;
         align-items: center;
         gap: 8px;
-        transition: gap 0.3s ease;
+        transition: gap 0.3s ease, color 0.3s ease;
 
         &:hover {
             gap: 16px;
+            color: var(--text-color);
         }
     }
 
@@ -53,14 +57,15 @@
         display: block;
         position: relative;
         overflow: hidden;
-        border: 1px solid #e5e5e5;
+        border: 1px solid var(--border-color);
+        background-color: var(--card-bg);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-decoration: none;
-        color: #1a1a1a;
+        color: var(--text-color);
 
         &:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px var(--shadow-md);
         }
 
         &:hover &-image {
@@ -77,17 +82,17 @@
 
     &__item-content {
         padding: 30px;
-        background-color: #ffffff;
+        background-color: var(--card-bg);
     }
 
     &__item-title {
-
         font-size: clamp(18px, 2vw, 24px);
         margin-bottom: 8px;
         font-weight: 600;
+        color: var(--text-color);
     }
 
     &__item-category {
-        color: #666666;
+        color: var(--text-secondary);
     }
 }

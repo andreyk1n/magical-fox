@@ -1,5 +1,26 @@
 @use 'variables' as *;
 
+// Змінні для тем
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #e5e5e5;
+    --nav-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    --nav-bg: #1a1a1a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .header {
     z-index: 100;
     width: 100%;
@@ -7,9 +28,9 @@
     top: 0;
     left: 0;
     transition: top $transitionDuration;
-    background-color: #fff;
+    background-color: var(--bg-color);
     padding: 17px 0;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 2px solid var(--border-color);
 
     &__container {
         display: flex;
@@ -48,7 +69,7 @@
             justify-content: center;
             width: 100%;
             min-height: 100vh;
-            background-color: #ffffff;
+            background-color: var(--nav-bg);
             transition-duration: $transitionDuration;
         }
 
@@ -59,12 +80,13 @@
         a {
             transition-duration: .5s;
             position: relative;
+            color: var(--text-color);
 
             &::before {
                 content: '';
                 width: 0;
                 height: 2px;
-                background-color: #000;
+                background-color: var(--text-color);
                 transition-duration: .5s;
                 position: absolute;
                 left: 0;
@@ -72,7 +94,7 @@
             }
 
             &:hover {
-                color: #000;
+                color: var(--text-color);
 
                 &::before {
                     width: 100%;
@@ -82,6 +104,31 @@
             @media (max-width: 992px) {
                 font-size: 25px;
             }
+        }
+    }
+
+    &__theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        transition: transform 0.3s ease;
+        z-index: 1;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .theme-icon {
+            transition: opacity 0.3s ease;
+        }
+
+        .theme-icon--dark {
+            display: none;
         }
     }
 
@@ -105,7 +152,7 @@
                 display: block;
                 width: 100%;
                 height: 2px;
-                background-color: $buttonBgColor;
+                background-color: var(--text-color);
                 position: relative;
                 transition-duration: $transitionDuration;
 
@@ -115,7 +162,7 @@
                     position: absolute;
                     width: 100%;
                     height: 2px;
-                    background-color: $buttonBgColor;
+                    background-color: var(--text-color);
                     transition-duration: $transitionDuration;
                 }
 
@@ -144,3 +191,4 @@
         }
     }
 }
+

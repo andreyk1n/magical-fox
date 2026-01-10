@@ -1,7 +1,9 @@
+@use 'variables' as *;
+
 .faq {
     padding: 96px 0;
     position: relative;
-
+    background-color: var(--bg-color);
 
     @media (max-width: 992px) {
         padding: 60px 0;
@@ -15,6 +17,7 @@
 
     &__title {
         margin: 0 0 50px 0;
+        color: var(--text-color);
 
         @media (max-width: 992px) {
             margin: 0 0 30px 0;
@@ -27,7 +30,7 @@
     }
 
     &__item {
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid var(--border-color);
 
         &--active {
             .faq__icon {
@@ -49,7 +52,7 @@
         text-align: left;
         font-size: clamp(18px, 5vw, 22px);
         font-weight: 600;
-        color: #1a1a1a;
+        color: var(--text-color);
         cursor: pointer;
         display: flex;
         justify-content: space-between;
@@ -57,7 +60,7 @@
         transition: color 0.3s ease;
 
         &:hover {
-            color: #666666;
+            color: var(--text-secondary);
         }
     }
 
@@ -66,13 +69,14 @@
         transition: transform 0.5s ease;
         flex-shrink: 0;
         margin-left: 16px;
+        color: var(--text-color);
     }
 
     &__answer {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease, padding 0.5s ease;
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
         font-size: clamp(16px, 2vw, 18px);
     }

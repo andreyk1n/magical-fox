@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .service-detail {
     padding: 64px 0;
 
@@ -8,7 +10,7 @@
     }
 
     &:nth-child(even) {
-        background-color: #f8f9fa;
+        background-color: var(--section-bg);
     }
 
     &__container {
@@ -25,7 +27,7 @@
 
     &__number {
         font-size: 16px;
-        color: #666666;
+        color: var(--text-secondary);
         margin-bottom: 8px;
         font-weight: 500;
     }
@@ -35,11 +37,12 @@
         font-weight: 600;
         margin-bottom: 32px;
         line-height: 1.2;
+        color: var(--text-color);
     }
 
     &__intro {
         font-size: 18px;
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
         margin-bottom: 32px;
     }
@@ -52,13 +55,13 @@
         padding-left: 24px;
         position: relative;
         margin-bottom: 16px;
-        color: #666666;
+        color: var(--text-secondary);
 
         &::before {
             content: "—";
             position: absolute;
             left: 0;
-            color: #1a1a1a;
+            color: var(--text-color);
         }
     }
 
@@ -72,10 +75,11 @@
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__text {
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
         margin-bottom: 16px;
     }
@@ -89,13 +93,13 @@
     &__list-item {
         padding-left: 24px;
         position: relative;
-        color: #666666;
+        color: var(--text-secondary);
 
         &::before {
             content: "•";
             position: absolute;
             left: 8px;
-            color: #1a1a1a;
+            color: var(--text-color);
         }
     }
 
@@ -109,13 +113,13 @@
     &__tag {
         font-size: 14px;
         padding: 8px 16px;
-        background-color: #ffffff;
-        border: 1px solid #e5e5e5;
-        color: #666666;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        color: var(--text-secondary);
     }
 
     &:nth-child(even) &__tag {
-        background-color: #ffffff;
+        background-color: var(--card-bg);
     }
 
     &__cta {
@@ -125,22 +129,22 @@
     &__button {
         display: inline-block;
         padding: 16px 32px;
-        background-color: #1a1a1a;
-        color: #ffffff;
+        background-color: var(--button-bg);
+        color: var(--button-text);
         text-decoration: none;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         font-weight: 500;
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-lg);
         }
     }
 }
 
 .cta-section {
     padding: 96px 0;
-    background-color: #f8f9fa;
+    background-color: var(--section-bg);
     text-align: center;
 
     &.animate {
@@ -153,11 +157,12 @@
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__text {
         font-size: 18px;
-        color: #666666;
+        color: var(--text-secondary);
         margin-bottom: 32px;
         max-width: 600px;
         margin-left: auto;
@@ -167,8 +172,8 @@
     &__button {
         display: inline-block;
         padding: 16px 40px;
-        background-color: #1a1a1a;
-        color: #ffffff;
+        background-color: var(--button-bg);
+        color: var(--button-text);
         text-decoration: none;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         font-size: 18px;
@@ -176,7 +181,7 @@
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-lg);
         }
     }
 }

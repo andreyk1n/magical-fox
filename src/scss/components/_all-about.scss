@@ -1,6 +1,8 @@
+@use 'variables' as *;
+
 .story {
     padding: 96px 0;
-    background-color: #f8f9fa;
+    background-color: var(--section-bg);
 
     &.animate {
         opacity: 0;
@@ -36,12 +38,13 @@
         font-size: 32px;
         font-weight: 600;
         line-height: 1.2;
+        color: var(--text-color);
     }
 
     &__text {
         font-size: 17px;
         line-height: 1.8;
-        color: #666666;
+        color: var(--text-secondary);
     }
 }
 
@@ -59,6 +62,7 @@
         font-weight: 600;
         margin-bottom: 64px;
         text-align: center;
+        color: var(--text-color);
     }
 
     &__grid {
@@ -78,7 +82,8 @@
 
     &__item {
         padding: 64px;
-        border: 1px solid #e5e5e5;
+        border: 1px solid var(--border-color);
+        background-color: var(--card-bg);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         @media (max-width: 576px) {
@@ -87,14 +92,14 @@
 
         &:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 40px var(--shadow-sm);
         }
     }
 
     &__item-number {
         font-size: 48px;
         font-weight: 600;
-        color: #e5e5e5;
+        color: var(--number-color);
         line-height: 1;
         margin-bottom: 16px;
     }
@@ -103,17 +108,18 @@
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__item-text {
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
     }
 }
 
 .process {
     padding: 96px 0;
-    background-color: #f8f9fa;
+    background-color: var(--section-bg);
 
     &.animate {
         opacity: 0;
@@ -125,11 +131,12 @@
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__intro {
         font-size: 18px;
-        color: #666666;
+        color: var(--text-secondary);
         margin-bottom: 64px;
         max-width: 700px;
     }
@@ -148,7 +155,8 @@
     &__step-number {
         width: 60px;
         height: 60px;
-        border: 2px solid #1a1a1a;
+        border: 2px solid var(--text-color);
+        color: var(--text-color);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -171,10 +179,11 @@
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 8px;
+        color: var(--text-color);
     }
 
     &__step-text {
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
     }
 }
@@ -197,11 +206,12 @@
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__intro {
         font-size: 18px;
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.7;
     }
 
@@ -213,7 +223,7 @@
 
     &__stat {
         padding: 32px;
-        border-left: 2px solid #1a1a1a;
+        border-left: 2px solid var(--text-color);
     }
 
     &__stat-number {
@@ -221,17 +231,18 @@
         font-weight: 600;
         line-height: 1;
         margin-bottom: 8px;
+        color: var(--text-color);
     }
 
     &__stat-label {
         font-size: 18px;
-        color: #666666;
+        color: var(--text-secondary);
     }
 }
 
 .mission {
     padding: 96px 0;
-    background-color: #f8f9fa;
+    background-color: var(--section-bg);
 
     &.animate {
         opacity: 0;
@@ -267,11 +278,12 @@
         font-size: 32px;
         font-weight: 600;
         line-height: 1.2;
+        color: var(--text-color);
     }
 
     &__text {
         font-size: 17px;
-        color: #666666;
+        color: var(--text-secondary);
         line-height: 1.8;
     }
 }
@@ -290,11 +302,12 @@
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 16px;
+        color: var(--text-color);
     }
 
     &__text {
         font-size: 18px;
-        color: #666666;
+        color: var(--text-secondary);
         margin-bottom: 32px;
         max-width: 600px;
         margin-left: auto;
@@ -304,15 +317,15 @@
     &__button {
         display: inline-block;
         padding: 16px 40px;
-        background-color: #1a1a1a;
-        color: #ffffff;
+        background-color: var(--button-bg);
+        color: var(--button-text);
         text-decoration: none;
         font-size: 18px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px var(--shadow-lg);
         }
     }
 }
