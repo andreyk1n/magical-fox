@@ -70,23 +70,54 @@ document.querySelectorAll('.header__link, .footer__link').forEach(link => {
 // /current page
 
 // theme
-
-// Перемикач теми
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
-
-// Перевірка збереженої теми
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.setAttribute('data-theme', savedTheme);
-
 themeToggle.addEventListener('click', () => {
   const currentTheme = html.getAttribute('data-theme');
   const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-  
+
   html.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
 });
-
-
-
 // /theme
+
+// custom select
+document.querySelectorAll('.custom-select').forEach(select => {
+    const trigger = select.querySelector('.custom-select__trigger');
+    const dropdown = select.querySelector('.custom-select__dropdown');
+    const options = select.querySelectorAll('.custom-select__option');
+    const input = select.querySelector('input[type="hidden"]');
+    const label = trigger.querySelector('span');
+    const close = () => {
+        trigger.classList.remove('custom-select__trigger--active');
+        dropdown.classList.remove('custom-select__dropdown--active');
+    };
+    trigger.addEventListener('click', () => {
+        trigger.classList.toggle('custom-select__trigger--active');
+        dropdown.classList.toggle('custom-select__dropdown--active');
+    });
+    options.forEach(option =>
+        option.addEventListener('click', () => {
+            options.forEach(o =>
+                o.classList.remove('custom-select__option--selected')
+            );
+            option.classList.add('custom-select__option--selected');
+            label.textContent = option.textContent;
+            input.value = option.dataset.value || '';
+            trigger.classList.toggle(
+                'custom-select__trigger--has-value',
+                !!option.dataset.value
+            );
+
+            close();
+        })
+    );
+    document.addEventListener('click', e => {
+        if (!select.contains(e.target)) close();
+    });
+});
+
+
+// /custom select

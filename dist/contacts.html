@@ -207,18 +207,25 @@
 
                 <div class="contact-form__group">
                     <label for="service" class="contact-form__label">Послуга *</label>
-                    <select id="service" name="service" class="contact-form__select" required>
-                        <option value="">Оберіть послугу</option>
-                        <option value="web-development">Веб-розробка</option>
-                        <option value="wordpress">WordPress розробка</option>
-                        <option value="optimization">Оптимізація сайтів</option>
-                        <option value="audit">Аудит сайтів</option>
-                        <option value="seo">SEO оптимізація</option>
-                        <option value="mobile">Мобільні додатки</option>
-                        <option value="bots">Чат-боти</option>
-                        <option value="design">UI/UX дизайн</option>
-                        <option value="support">Технічна підтримка</option>
-                    </select>
+                    <div class="custom-select" data-name="service">
+                        <div class="custom-select__trigger">
+                            <span>Оберіть послугу</span>
+                            <div class="custom-select__arrow"></div>
+                        </div>
+                        <div class="custom-select__dropdown">
+                            <div class="custom-select__option" data-value="">Оберіть послугу</div>
+                            <div class="custom-select__option" data-value="web-development">Веб-розробка</div>
+                            <div class="custom-select__option" data-value="wordpress">WordPress розробка</div>
+                            <div class="custom-select__option" data-value="optimization">Оптимізація сайтів</div>
+                            <div class="custom-select__option" data-value="audit">Аудит сайтів</div>
+                            <div class="custom-select__option" data-value="seo">SEO оптимізація</div>
+                            <div class="custom-select__option" data-value="mobile">Мобільні додатки</div>
+                            <div class="custom-select__option" data-value="bots">Чат-боти</div>
+                            <div class="custom-select__option" data-value="design">UI/UX дизайн</div>
+                            <div class="custom-select__option" data-value="support">Технічна підтримка</div>
+                        </div>
+                        <input type="hidden" name="service" required>
+                    </div>
                 </div>
 
                 <div class="contact-form__group">
